@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleAnswer = () => {
       if (answer.style.display === 'none') {
         answer.style.display = 'block';
-        icon.src = 'assets/images/icon-minus.svg'; // Change to minus icon
+        icon.src = `${window.location.origin}/${FAQ-Accordion}/assets/images/icon-minus.svg`; // Change to minus icon
       } else {
         answer.style.display = 'none';
-        icon.src = 'assets/images/icon-plus.svg'; // Change to plus icon
+        icon.src = `${window.location.origin}/${FAQ-Accordion}/assets/images/icon-plus.svg`; // Change to plus icon
       }
     };
 //swaps the icon and shows the answer when clicked
