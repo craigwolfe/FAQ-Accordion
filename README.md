@@ -1,6 +1,6 @@
 # FAQ Accordion
 
-![Design preview for the FAQ accordion coding challenge](./design/desktop-preview.jpg)
+![Design preview for the FAQ accordion coding challenge](./assets/images/desktop-preview.jpg)
 
 ## Welcome! 👋
 
