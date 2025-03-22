@@ -48,26 +48,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const questions = document.querySelectorAll('.question');
 
   questions.forEach((question, index) => {
-    //loops through each 'question' element
     const answer = document.getElementById(`answer${index + 1}`);
-        // This gets the corresponding 'answer' element by its ID, which is assumed to be in the format 'answer1', 'answer2', etc.
-
     const icon = question.querySelector('.toggle-icon');
-    // This selects the '.toggle-icon' element within the current 'question' element.
+//hide all answers on load
     const toggleAnswer = () => {
-          // This function toggles the display of the answer and the icon.
       if (answer.style.display === 'none') {
-        // if the current answer is hidden 
         answer.style.display = 'block';
-        //set display to block and show
-        icon.src = '/assets/images/icon-minus.svg'; // Change to minus icon
+        icon.src = 'https://github.com/craigwolfe/FAQ-Accordion/blob/main/assets/images/icon-minus.svg'; // Change to minus icon
       } else {
-        //if the answer is currently shown
         answer.style.display = 'none';
-        //hide it
-        icon.src = '/assets/images/icon-plus.svg'; // Change to plus icon
+        icon.src = 'https://github.com/craigwolfe/FAQ-Accordion/blob/main/assets/images/icon-plus.svg'; // Change to plus icon
       }
     };
+//swaps the icon and shows the answer when clicked
+    question.addEventListener('click', toggleAnswer);
+//enter is pressed on the question the answer will toggle
+    question.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        toggleAnswer();
+      }
+    });
+  });
+});
 
     // Swaps the icon and shows the answer when clicked
     question.addEventListener('click', toggleAnswer);
@@ -82,9 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+-I did discover when swapping issues in JavaScript that I had to use the absolute path from Github to correctly fetch the images especially on GitHub Pages. 
+
 ## Solution
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/faq-accordion-with-javascript-ALvUftnW4t)
+- [Live Site URL](https://craigwolfe.github.io/FAQ-Accordion/)
 
 
