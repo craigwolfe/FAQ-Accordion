@@ -85,6 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 ** I did discover when swapping issues in JavaScript that I had to use the absolute path from Github to correctly fetch the images especially on GitHub Pages. 
+** Since GitHub Pages requires absolute paths in JavaScript, construct them dynamically:
+```javascript 
+const repoName = "faq-accordion"; // Change to your repo name
+icon.src = `${window.location.origin}/${repoName}/assets/images/icon-minus.svg`;
+```
+**This ensures the correct URL is used whether running locally or on GitHub Pages.
 
 ## Solution
 
