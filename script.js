@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleAnswer = () => {
       if (answer.style.display === 'none') {
         answer.style.display = 'block';
-        icon.src = 'https://raw.githubusercontent.com/craigwolfe/FAQ-Accordion/refs/heads/main/assets/images/icon-minus.svg'; // Change to minus icon
+        icon.src = 'assets/images/icon-minus.svg'; // Change to minus icon
       } else {
         answer.style.display = 'none';
-        icon.src = 'https://raw.githubusercontent.com/craigwolfe/FAQ-Accordion/328be432bc35ea9c1aa7a1d1441275e72f2cd77d/assets/images/icon-plus.svg'; // Change to plus icon
+        icon.src = 'assets/images/icon-plus.svg'; // Change to plus icon
       }
     };
 //swaps the icon and shows the answer when clicked
