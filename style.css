@@ -7,6 +7,10 @@
 :root {
   --primary-color: hsl(275, 100%, 70%);
   --secondary-color: hsl(275, 100%, 60%);
+  --tertiary-color: hsl(275, 100%, 50%);
+  --answer-color: hsl(292, 16%, 66.67%);
+  --answer-color-hover: hsl(292, 16%, 40%);
+  --question-color-hover: hsl(275, 100%, 50%);
   --text-color: hsl(275, 100%, 20%);
   --font-weight-normal: 400;
   --font-weight-bold: 600;
@@ -69,29 +73,39 @@ h2 {
   margin-bottom: var(--spacing-small);
   margin-top: var(--spacing-small);
 }
-
+h2:hover{
+  color: var(--question-color-hover);
+}
 .question {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: var(--spacing-large);
 }
-
+.question:focus {
+  outline: 2px solid var(--primary-color); /* Add a focus outline */
+  outline-offset: 4px; /* Add some space between the outline and the element */
+}
 article.faq-item {
   border-bottom: 2px solid hsla(275, 100%, 70%, 0.1);
 }
-
 .answer {
   margin-top: var(--spacing-small);
   margin-bottom: var(--spacing-small);
 }
-
 .answer p {
   line-height: var(--spacing-medium-large);
   font-size: var(--font-size-small);
   font-size: var(--font-size-small-medium);
+  color:var(--answer-color);
 }
-
+.answer p:focus {
+  outline: 2px solid var(--primary-color); /* Add a focus outline */
+  outline-offset: 4px; /* Add some space between the outline and the element */
+}
+.answer p:hover {
+  color: var(--answer-color-hover);
+}
 .toggle-icon {
   cursor: pointer;
   transition: transform 0.3s ease;

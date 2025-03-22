@@ -1,16 +1,26 @@
-document.querySelectorAll(".faq-item").forEach(item => {
-    const question = item.querySelector(".question");
-    const answer = item.querySelector(".answer");
-    const icon = question.querySelector(".toggle-icon");
-  
-    question.addEventListener("click", () => {
-      // Toggle display of the answer
-      if (answer.style.display === "none") {
-        answer.style.display = "block";
-        icon.src = "/assets/images/icon-minus.svg"; // Switch to a minus icon
+document.addEventListener('DOMContentLoaded', () => {
+  const questions = document.querySelectorAll('.question');
+
+  questions.forEach((question, index) => {
+    const answer = document.getElementById(`answer${index + 1}`);
+    const icon = question.querySelector('.toggle-icon');
+//hide all answers on load
+    const toggleAnswer = () => {
+      if (answer.style.display === 'none') {
+        answer.style.display = 'block';
+        icon.src = '/assets/images/icon-minus.svg'; // Change to minus icon
       } else {
-        answer.style.display = "none";
-        icon.src = "/assets/images/icon-plus.svg"; // Switch back to a plus icon
+        answer.style.display = 'none';
+        icon.src = '/assets/images/icon-plus.svg'; // Change to plus icon
+      }
+    };
+//swaps the icon and shows the answer when clicked
+    question.addEventListener('click', toggleAnswer);
+//enter is pressed on the question the answer will toggle
+    question.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        toggleAnswer();
       }
     });
   });
+});
