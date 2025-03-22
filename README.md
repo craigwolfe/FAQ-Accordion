@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
+```
 -I did discover when swapping issues in JavaScript that I had to use the absolute path from Github to correctly fetch the images especially on GitHub Pages. 
 
 ## Solution
